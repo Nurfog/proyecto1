@@ -1,13 +1,16 @@
+
 from django.contrib import admin
 from .models import planestudios, cursos, bancopreguntas, bancorespuestas, bancoresultados
 
-admin.site.register(planestudios)
 
-admin.site.register(cursos)
 
-admin.site.register(bancopreguntas)
+class cursosAdmin(admin.ModelAdmin):
+    admin.site.register(planestudios)
+    admin.site.register(cursos)
 
-admin.site.register(bancorespuestas)
 
-admin.site.register(bancoresultados)
+class diagosnosticosAdmin(admin.ModelAdmin):
+    admin.site.register(bancopreguntas)
+    admin.site.register(bancorespuestas)
+    admin.site.register(bancoresultados)
 
