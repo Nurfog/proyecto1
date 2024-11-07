@@ -30,7 +30,7 @@ def error_404(request):
     return render(request, 'pages/404.html', status=404)
 
 def home(request):
-    return render(request, 'lms/index.html')
+    return render(request, 'lms/pages/index.html')
 
 def login_page(request):
     # Check if the HTTP request method is POST (form submission)
