@@ -31,5 +31,6 @@ urlpatterns = [
     path('error_404/', views.error_404, name='error_404'),
     path('login/', views.login_page, name='login'),
     path('register/', views.register_page, name='register'),
+    path('home/', views.home, name='home'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

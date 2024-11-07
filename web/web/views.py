@@ -29,6 +29,9 @@ def testimonial(request):
 def error_404(request):
     return render(request, 'pages/404.html', status=404)
 
+def home(request):
+    return render(request, 'lms/index.html')
+
 def login_page(request):
     # Check if the HTTP request method is POST (form submission)
     if request.method == "POST":
@@ -90,4 +93,7 @@ def register_page(request):
     
     # Render the registration page template (GET request)
     return render(request, 'pages/register.html')
+
+
+
 
