@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.contrib.auth.views import LoginView
 from django.conf.urls.static import static
 from . import settings, views
 
@@ -28,4 +29,7 @@ urlpatterns = [
     path('team/', views.team, name='team'),
     path('testimonial/', views.testimonial, name='testimonial'),
     path('error_404/', views.error_404, name='error_404'),
+    path('login/', views.login_page, name='login'),
+    path('register/', views.register_page, name='register'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
